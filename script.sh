@@ -1,6 +1,8 @@
 #!/bin/bash
 
-#Atualizar e... atualizar!
+
+
+#Atualiza e... atualiza!
 sudo pacman -Syu
 
 #Instala o  GIT e GO, então o YAY
@@ -60,3 +62,5 @@ ln -s ~/.dotfiles/.config/polybar/scripts/rofi/powermenu.rasi ~/.config/polybar/
 ln -s ~/.dotfiles/.config/polybar/scripts/rofi/styles.rasi ~/.config/polybar/scripts/rofi/styles.rasi
 
 cd ~
+
+#
