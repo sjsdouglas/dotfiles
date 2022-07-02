@@ -1,3 +1,9 @@
+#echo
+#echo 'Arch+I3 \(-_-)/' 
+#echo Olá, $USER!
+#echo Kernel `uname -s -r`.
+#echo
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="half-life"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -41,7 +47,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -70,7 +76,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git sudo zsh-autosuggestions zsh-interactive-cd zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,10 +89,11 @@ export LANG=pt_BR.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+export EDITOR='nano'
 # else
 #   export EDITOR='mvim'
 # fi
+export BROWSER="google-chrome-stable"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -99,3 +106,23 @@ export LANG=pt_BR.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Edição de arq.
+
+alias zshrcg="sudo gedit ~/.zshrc"
+alias zshrc="sudo nano ~/.zshrc"
+alias i3config="sudo nano ~/.config/i3/config"
+alias i3configg="sudo gedit ~/.config/i3/config"
+alias polybarconfig="sudo nano ~/.config/polybar/config"
+
+# Sistema
+alias update="sudo pacman -Syu"
+alias install="sudo pacman -S"
+alias installn="sudo pacman -S --needed"
+alias search="pacman -Ss"
+alias search-installed="pacman -Ss $1 | grep installed | sort"
+alias search-group="pacman -Sgg"
+alias info="pacman -Qi"
+
+# Poggers | lolban "Insira seu tex*#.. I_US3_4RCH_BTW.."
+alias lolban="~/.config/i3/script/./lolban.sh"
