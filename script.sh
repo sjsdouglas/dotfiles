@@ -5,7 +5,7 @@
 #Atualiza e... atualiza!
 sudo pacman -Syu
 
-#Instala o  GIT e GO, então o YAY
+#Instala o  GIT, GO e então o YAY
 sudo pacman -S git go --needed
 
 git clone https://aur.archlinux.org/yay.git
@@ -32,10 +32,10 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #Instala a Polybar
-sudo pacman -S polybar
+#sudo pacman -S polybar
 
 #Setup dos dotfiles - clona e linka os arquivos
-git clone https://github.com/sjsdouglas/dotfiles ~/.dotfiles
+#git clone https://github.com/sjsdouglas/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
@@ -64,3 +64,5 @@ ln -s ~/.dotfiles/.config/polybar/scripts/rofi/styles.rasi ~/.config/polybar/scr
 cd ~
 
 #
+
+echo "re-log and end"
